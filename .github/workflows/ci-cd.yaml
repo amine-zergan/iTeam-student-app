@@ -1,10 +1,8 @@
 name: Android Release
 
-# 1
 on:
-  # 2
   push:
-    branches: [ "master" ,"Dev","test"]
+    branches: [ "main" ,"Dev","Test"]
 
 jobs:
   develop:
