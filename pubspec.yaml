@@ -26,3 +26,19 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
+    - assets/images/
+    - assets/log/
+    - assets/icons/
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/log/logo.png"
+  color_dark: "#ffffff"
+  image_dark: "assets/log/logo.png"
+  android_gravity: center
+  android_12:
+    image: "assets/log/logo.png"
+    icon_background_color: "#ffffff"
+    image_dark: "assets/log/logo.png"
+    icon_background_color_dark: "#ffffff"
