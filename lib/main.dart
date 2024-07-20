@@ -9,10 +9,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('Start Iteams Application!'),
+          child: Text(
+            'Start Iteams Application!',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
         ),
       ),
     );
