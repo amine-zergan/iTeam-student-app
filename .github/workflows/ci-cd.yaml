@@ -19,9 +19,12 @@ jobs:
           channel: 'stable'
       - name: Get dependencies
         run: flutter pub get
+      - name: flutter run icons_launcher
+        run: flutter pub run flutter_launcher_icons
 
       - name: flutter run splash-screen
         run: dart run flutter_native_splash:create
+
   staging:
     runs-on: ubuntu-latest
     needs: [develop]
@@ -37,7 +40,8 @@ jobs:
           channel: 'stable'
       - name: Get dependencies
         run: flutter pub get
-
+      - name: flutter run icons_launcher
+        run: flutter pub run flutter_launcher_icons
       - name: flutter run splash-screen
         run: dart run flutter_native_splash:create
 
@@ -56,6 +60,8 @@ jobs:
           channel: 'stable'
       - name: Get dependencies
         run: flutter pub get
+      - name: flutter run icons_launcher
+        run: flutter pub run flutter_launcher_icons
 
       - name: flutter run splash-screen
         run: dart run flutter_native_splash:create
