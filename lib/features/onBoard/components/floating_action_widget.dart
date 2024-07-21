@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
-import 'package:items_app/features/onBoarding_page/data/item_list_onboard.dart';
+import 'package:items_app/features/onBoard/data/item_list_onboard.dart';
 
 class FloatingActionWidget extends StatelessWidget {
   const FloatingActionWidget({

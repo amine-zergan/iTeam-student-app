@@ -5,7 +5,7 @@ import 'package:items_app/features/auth/presentation/login_page/components/forge
 import 'package:items_app/features/auth/presentation/login_page/components/password_field_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/welcome_text_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/sign_in_page.dart';
-import 'package:items_app/features/onBoarding_page/components/logo_item_widget.dart';
+import 'package:items_app/features/onBoard/components/logo_item_widget.dart';
 
 class BodySignIn extends StatefulWidget {
   const BodySignIn({super.key});

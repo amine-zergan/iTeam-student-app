@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:items_app/core/routes/route_name.dart';
-import 'package:items_app/features/onBoarding_page/components/body_onboard_widget.dart';
-import 'package:items_app/features/onBoarding_page/components/floating_action_widget.dart';
+import 'package:items_app/features/onBoard/components/body_onboard_widget.dart';
+import 'package:items_app/features/onBoard/components/floating_action_widget.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});

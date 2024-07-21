@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:items_app/features/onBoarding_page/components/footer_bubble_widget.dart';
-import 'package:items_app/features/onBoarding_page/components/logo_item_widget.dart';
-import 'package:items_app/features/onBoarding_page/components/page_viewOnboard_widget.dart';
+import 'package:items_app/features/onBoard/components/footer_bubble_widget.dart';
+import 'package:items_app/features/onBoard/components/logo_item_widget.dart';
+import 'package:items_app/features/onBoard/components/page_viewOnboard_widget.dart';
 
 
 class BodyOnBoardingWidget extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:items_app/features/onBoarding_page/data/onboard_item.dart';
+import 'package:items_app/features/onBoard/data/onboard_item.dart';
 
 List<OnboardItem> itemList = [
   OnboardItem(
