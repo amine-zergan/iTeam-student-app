@@ -17,6 +17,9 @@
     ".idea": true,
     ".dart_tool": true,
     "pubspec.lock": true,
-    ".gitignore": true
+    ".gitignore": true,
+    ".flutter-plugins-dependencies": true,
+    ".flutter-plugins": true,
+    "templates": true
   }
 }

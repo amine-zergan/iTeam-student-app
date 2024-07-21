@@ -23,6 +23,44 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   floor_generator: ^1.4.0
   build_runner: ^2.1.2
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/log/iteam.png"
+  min_sdk_android: 21 
+  remove_alpha_ios: true
+  android_gravity: fill
+
+  web:
+    generate: true
+    image_path: "assets/log/iteam.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
+  windows:
+    generate: true
+    image_path: "assets/log/iteam.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/log/iteam.png"
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
+    - assets/log/
+    - assets/images/
+   
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/log/splash.png"
+  color_dark: "#ffffff"
+  image_dark: "assets/log/splash.png"
+  android_gravity: fill
+  android_12:
+    image: "assets/log/splash.png"
+    icon_background_color: "#ffffff"
+    image_dark: "assets/log/splash.png"
+    icon_background_color_dark: "#ffffff"

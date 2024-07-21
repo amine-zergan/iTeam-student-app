@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:items_app/core/routes/route_name.dart';
+import 'package:items_app/core/routes/route_page.dart';
+import 'package:items_app/core/theme/theme_app.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
 }
 
@@ -9,12 +14,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeApp.darkTheme(),
+      theme: ThemeApp.ligthTheme(),
+      themeMode: ThemeMode.light,
+      transitionDuration: const Duration(milliseconds: 600),
+      defaultTransition: Transition.fadeIn,
+      getPages: GetRoutePage.getPage,
+      initialRoute: RouteNamePage.onBoardPath,
     );
   }
 }
