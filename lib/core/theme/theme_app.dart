@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class ThemeApp {
   static ThemeData ligthTheme() {
-    return ThemeData.light()
-        .copyWith(scaffoldBackgroundColor: Colors.transparent);
+    return ThemeData.light().copyWith(
+      scaffoldBackgroundColor: Colors.white,
+    );
   }
 
   static ThemeData darkTheme() {

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:items_app/core/routes/route_name.dart';
+import 'package:items_app/core/routes/route_page.dart';
 import 'package:items_app/core/theme/theme_app.dart';
 
 void main() {
@@ -11,19 +14,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeApp.darkTheme(),
       theme: ThemeApp.ligthTheme(),
       themeMode: ThemeMode.light,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Start Iteams Application!',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-        ),
-      ),
+      getPages: GetRoutePage.getPage,
+      initialRoute: RouteNamePage.onBoardPath,
     );
   }
 }
