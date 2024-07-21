@@ -1,4 +1,6 @@
-// ignore: file_names
+// ignore:
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
 import '../data/item_list_onboard.dart';
