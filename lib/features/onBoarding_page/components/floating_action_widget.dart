@@ -6,9 +6,11 @@ class FloatingActionWidget extends StatelessWidget {
   const FloatingActionWidget({
     super.key,
     required this.indexPage,
+    this.onPressed,
   });
 
   final int indexPage;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class FloatingActionWidget extends StatelessWidget {
             )
           : MaterialButton(
               key: const ValueKey("2"),
-              onPressed: () {},
+              onPressed: onPressed,
               color: primaryDarkColor,
               minWidth: size.width * 0.2,
               shape: RoundedRectangleBorder(
