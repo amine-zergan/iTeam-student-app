@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:items_app/core/routes/route_name.dart';
 import 'package:items_app/features/onBoarding_page/components/body_onboard_widget.dart';
 import 'package:items_app/features/onBoarding_page/components/floating_action_widget.dart';
 
@@ -16,7 +18,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
     return Scaffold(
       floatingActionButton: FloatingActionWidget(
         indexPage: indexPage,
-        onPressed: () {},
+        onPressed: () {
+          Get.offNamed(RouteNamePage.loginPath);
+        },
       ),
       body: BodyOnBoardingWidget(
         indexPage: indexPage,
