@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:items_app/core/routes/route_name.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/code_field_widget.dart';
 import 'package:items_app/core/components/button_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/forget_password_widget.dart';
@@ -106,7 +108,9 @@ class _BodySignInState extends State<BodySignIn> {
                       ButtonWidget(
                         title: "Se Connecter",
                         onPressed: () {
-                          if (form.currentState!.validate()) {}
+                          if (form.currentState!.validate()) {
+                            Get.offNamed(RouteNamePage.homePath);
+                          }
                         },
                       )
                     ],
