@@ -16,7 +16,7 @@ class DashboardPageView extends StatelessWidget {
         elevation: 10,
         title: Text(
           "Tableau de Bord",
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 color: Colors.white,
               ),
         ),

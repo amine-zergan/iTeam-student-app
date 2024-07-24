@@ -24,7 +24,7 @@ class AppBarComponentWidget extends StatelessWidget {
       ),
       title: Text(
         "Chat",
-        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.white,
             ),
       ),
