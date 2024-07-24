@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
+import 'package:items_app/features/asseignement/affection_page.dart';
+import 'package:items_app/features/calender/calender_page.dart';
+import 'package:items_app/features/chat/presentation/components/chat_page.dart';
+import 'package:items_app/features/dashboard/presentation/dashboard.dart';
+import 'package:items_app/features/profil/profil_page_view.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
@@ -16,22 +21,12 @@ class _HomePageViewState extends State<HomePageView> {
     return Scaffold(
       body: IndexedStack(
         index: index,
-        children: [
-          Container(
-            color: Colors.amber,
-          ),
-          Container(
-            color: Colors.grey,
-          ),
-          Container(
-            color: Colors.white,
-          ),
-          Container(
-            color: Colors.red,
-          ),
-          Container(
-            color: Colors.amber,
-          )
+        children: const [
+          DashboardPageView(),
+          ChatPageView(),
+          AffectionPageView(),
+          CalenderPageView(),
+          ProfilViewPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -46,7 +41,6 @@ class _HomePageViewState extends State<HomePageView> {
         iconSize: 25,
         selectedItemColor: iconColorActive,
         unselectedItemColor: iconColorInactive,
-        // selectedLabelStyle: Theme.of(context).textTheme.titleSmall,
         items: const [
           BottomNavigationBarItem(
             label: "Accueil",
