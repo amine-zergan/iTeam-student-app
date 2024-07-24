@@ -101,48 +101,24 @@ class _AffectionPageViewState extends State<AffectionPageView>
               child: TabBarView(
                 controller: controller,
                 physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: size.height,
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: size.height * 0.13,
-                        ),
-                        Image.asset(
-                          "assets/images/affectation.png",
-                          width: size.width * 0.6,
-                        ),
-                        SizedBox(
-                          height: size.height * 0.03,
-                        ),
-                        Text(
-                          "Aucune mission à venir pour le moment",
-                          style: Theme.of(context).textTheme.titleLarge,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                          child: Text(
-                            "essayez de naviguer vers  la classe individuelle pour vérifier les résultats.",
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium
-                                ?.copyWith(color: Colors.black54),
-                          ),
-                        ),
-                      ],
-                    ),
+                children: const [
+                  EmptyAffectation(
+                    image: "assets/images/affectation.png",
+                    title: "Aucun travail à venir pour le moment",
+                    subtitle:
+                        "essayez de naviguer vers  la classe individuelle pour vérifier les résultats.",
                   ),
-                  Container(
-                    width: double.infinity,
-                    height: size.height,
+                  EmptyAffectation(
+                    image: "assets/images/post_retard.png",
+                    title: "Actuellement, il n'y a pas de travail en retard",
+                    subtitle:
+                        "Essayez de naviguer vers  la classe individuelle pour vérifier les résultats.",
                   ),
-                  Container(
-                    width: double.infinity,
-                    height: size.height,
+                  EmptyAffectation(
+                    image: "assets/images/completed_task.png",
+                    title: "Aucun travail n'a été effectué jusqu'à présent",
+                    subtitle:
+                        "essayez de naviguer vers  la classe individuelle pour vérifier les résultats.",
                   ),
                 ],
               ),
@@ -150,6 +126,56 @@ class _AffectionPageViewState extends State<AffectionPageView>
           ],
         ),
       )),
+    );
+  }
+}
+
+class EmptyAffectation extends StatelessWidget {
+  const EmptyAffectation({
+    super.key,
+    required this.title,
+    required this.image,
+    required this.subtitle,
+  });
+  final String title;
+  final String image;
+  final String subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: double.infinity,
+      height: size.height,
+      child: Column(
+        children: [
+          SizedBox(
+            height: size.height * 0.13,
+          ),
+          Image.asset(
+            image,
+            width: size.width * 0.6,
+          ),
+          SizedBox(
+            height: size.height * 0.03,
+          ),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(color: Colors.black54),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
