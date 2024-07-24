@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
 import 'package:items_app/features/asseignement/affection_page.dart';
 import 'package:items_app/features/calender/calender_page.dart';
-import 'package:items_app/features/chat/presentation/components/chat_page.dart';
+import 'package:items_app/features/chat/chat_page.dart';
 import 'package:items_app/features/dashboard/presentation/dashboard.dart';
 import 'package:items_app/features/profil/profil_page_view.dart';
 
