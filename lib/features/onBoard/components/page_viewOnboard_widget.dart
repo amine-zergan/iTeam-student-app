@@ -46,7 +46,7 @@ class PageViewOnboardWidget extends StatelessWidget {
                       ),
                       child: Image.asset(
                         item.imagePath,
-                        fit: BoxFit.fitWidth,
+                        fit: BoxFit.cover,
                         width: size.width * 0.7,
                         height: size.height * 0.8,
                       ),

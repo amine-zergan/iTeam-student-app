@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
       transitionDuration: const Duration(milliseconds: 600),
       defaultTransition: Transition.fadeIn,
       getPages: GetRoutePage.getPage,
-      initialRoute: RouteNamePage.loginPath,
+      initialRoute: RouteNamePage.onBoardPath,
     );
   }
 }
