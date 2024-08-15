@@ -172,7 +172,7 @@ class SignInPage extends StatelessWidget {
                           elevation: 10,
                           color: primaryColor,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5)),
+                              borderRadius: BorderRadius.circular(7)),
                           padding: const EdgeInsets.symmetric(
                             vertical: 15,
                           ),
