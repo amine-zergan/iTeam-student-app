@@ -7,8 +7,10 @@ class CalenderPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Text(
-          "",
+        child: Center(
+          child: Text(
+            "Calender View Page",
+          ),
         ),
       ),
     );

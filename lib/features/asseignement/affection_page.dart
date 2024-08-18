@@ -161,7 +161,8 @@ class EmptyAffectation extends StatelessWidget {
           ),
           Text(
             title,
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context).textTheme.titleMedium,
+            textAlign: TextAlign.center,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -170,7 +171,7 @@ class EmptyAffectation extends StatelessWidget {
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
-                  .titleMedium
+                  .titleSmall
                   ?.copyWith(color: Colors.black54),
             ),
           ),
@@ -193,7 +194,7 @@ class ChipComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
       padding: const EdgeInsets.symmetric(
-        horizontal: 10,
+        horizontal: 1,
       ),
       elevation: isSelected ? 10 : 0,
       side: BorderSide.none,
@@ -205,12 +206,14 @@ class ChipComponent extends StatelessWidget {
           25,
         ),
       ),
+      labelStyle: Theme.of(context).textTheme.titleSmall?.copyWith(
+            color: isSelected ? Colors.white : Colors.black,
+          ),
       label: Text(
         title,
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium
-            ?.copyWith(color: isSelected ? Colors.white : Colors.black),
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: isSelected ? Colors.white : Colors.black,
+            ),
       ),
     );
   }

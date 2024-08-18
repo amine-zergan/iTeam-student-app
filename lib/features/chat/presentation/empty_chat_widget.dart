@@ -8,7 +8,6 @@ class EmptyChatComponentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return SliverToBoxAdapter(
       child: Center(
         child: Column(
@@ -26,7 +25,7 @@ class EmptyChatComponentWidget extends StatelessWidget {
             ),
             Text(
               "Démarrer une nouvelle conversation",
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -34,7 +33,7 @@ class EmptyChatComponentWidget extends StatelessWidget {
                 "appuyez sur le bouton ci-dessous pour commencer à discuter avec votre collègue",
                 style: Theme.of(context)
                     .textTheme
-                    .titleMedium
+                    .titleSmall
                     ?.copyWith(color: Colors.black54),
                 textAlign: TextAlign.center,
               ),

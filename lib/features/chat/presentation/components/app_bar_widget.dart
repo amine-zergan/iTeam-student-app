@@ -14,7 +14,7 @@ class AppBarComponentWidget extends StatelessWidget {
       centerTitle: false,
       pinned: true,
       leading: const Padding(
-        padding: EdgeInsets.all(4.0),
+        padding: EdgeInsets.all(7),
         child: CircleAvatar(
           backgroundColor: Colors.white,
           child: Text(
@@ -22,70 +22,28 @@ class AppBarComponentWidget extends StatelessWidget {
           ),
         ),
       ),
+      actions: [
+        IconButton(
+          onPressed: () {
+            showSearch(
+              context: context,
+              delegate: SearchChatUser(),
+            ).then((_) {
+              // ignore: use_build_context_synchronously
+              FocusScope.of(context).unfocus();
+            });
+          },
+          icon: const Icon(
+            Icons.search_rounded,
+            color: Colors.grey,
+          ),
+        )
+      ],
       title: Text(
         "Chat",
         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.white,
             ),
-      ),
-      bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(
-          45,
-        ),
-        child: Container(
-          decoration: const BoxDecoration(
-            border: Border(),
-          ),
-          width: double.infinity,
-          height: 55,
-          padding: const EdgeInsets.only(
-            left: 15,
-            right: 15,
-            top: 10.0,
-            bottom: 10,
-          ),
-          child: TextFormField(
-            cursorColor: Colors.white,
-            onTap: () {
-              showSearch(
-                context: context,
-                delegate: SearchChatUser(),
-              ).then((_) {
-                FocusScope.of(context).unfocus();
-              });
-            },
-            decoration: const InputDecoration(
-              prefixIcon: Icon(
-                Icons.search_rounded,
-                color: Colors.grey,
-              ),
-              hintText: "Recherche ...",
-              hintStyle: TextStyle(
-                color: Colors.white,
-              ),
-              fillColor: textFormField,
-              filled: true,
-              contentPadding: EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }
