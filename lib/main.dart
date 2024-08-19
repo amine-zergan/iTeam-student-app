@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import 'package:items_app/core/routes/route_name.dart';
 import 'package:items_app/core/routes/route_page.dart';
 import 'package:items_app/core/theme/theme_app.dart';
+import 'package:items_app/injection.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await setupDi();
   runApp(const MainApp());
 }
 
