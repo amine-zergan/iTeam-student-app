@@ -6,7 +6,7 @@ import 'package:items_app/core/components/button_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/forget_password_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/password_field_widget.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/welcome_text_widget.dart';
-import 'package:items_app/features/auth/presentation/login_page/sign_in_page.dart';
+import 'package:items_app/features/auth/presentation/login_page/components/sign_in_page.dart';
 import 'package:items_app/features/onBoard/components/logo_item_widget.dart';
 
 class BodySignIn extends StatefulWidget {

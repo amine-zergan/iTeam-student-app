@@ -1,4 +1,3 @@
-import 'package:floor/floor.dart';
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
 

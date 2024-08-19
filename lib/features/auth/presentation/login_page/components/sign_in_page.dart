@@ -22,7 +22,7 @@ class AccessAccountWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "Se connecter pour accéder à votre compte.",
-      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+      style: Theme.of(context).textTheme.titleMedium?.copyWith(
             letterSpacing: 0.8,
             color: primaryDarkColor.withOpacity(
               0.6,

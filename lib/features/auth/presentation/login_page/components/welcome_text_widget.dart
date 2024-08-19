@@ -10,7 +10,7 @@ class WelcomeTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "Bienvenue A\nIteam-Student",
-      style: Theme.of(context).textTheme.displayMedium?.copyWith(
+      style: Theme.of(context).textTheme.displaySmall?.copyWith(
             letterSpacing: 0.8,
             color: primaryDarkColor,
             fontWeight: FontWeight.w600,
