@@ -20,6 +20,12 @@
     ".gitignore": true,
     ".flutter-plugins-dependencies": true,
     ".flutter-plugins": true,
-    "templates": true
+    "templates": true,
+    ".vscode": true,
+    ".github": true,
+    "ios": true,
+    "README.md": true,
+    "assets": true,
+    "android": true
   }
 }
