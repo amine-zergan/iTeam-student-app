@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:items_app/core/constant/palette_color.dart';
 // ignore: depend_on_referenced_packages
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:items_app/features/dashboard/presentation/components/card_component.dart';
 
 class DashboardPageView extends StatelessWidget {
