@@ -5,4 +5,5 @@ final getItInstance = GetIt.I;
 Future<void> setupDi() async {
   // ignore: avoid_print
   print("========= start dependency inject to main App ===============");
+  //getItInstance.registerSingleton(()=>);
 }

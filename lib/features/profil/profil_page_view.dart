@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:items_app/core/constant/palette_color.dart';
+import 'package:items_app/core/routes/route_name.dart';
 
 class ProfilViewPage extends StatelessWidget {
   const ProfilViewPage({super.key});
@@ -14,7 +16,11 @@ class ProfilViewPage extends StatelessWidget {
             expandedHeight: size.height * 0.17,
             actions: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.offAllNamed(
+                    RouteNamePage.loginPath,
+                  );
+                },
                 splashColor: Colors.grey,
                 icon: const Icon(
                   Icons.login_rounded,
