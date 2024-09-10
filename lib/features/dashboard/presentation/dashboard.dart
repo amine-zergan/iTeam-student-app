@@ -13,6 +13,7 @@ class DashboardPageView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
+        centerTitle: false,
         elevation: 10,
         title: Text(
           "Tableau de Bord",

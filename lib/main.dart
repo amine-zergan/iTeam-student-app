@@ -8,7 +8,9 @@ import 'package:items_app/injection.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupDi();
-  runApp(const MainApp());
+  runApp(
+    const MainApp(),
+  );
 }
 
 class MainApp extends StatelessWidget {
