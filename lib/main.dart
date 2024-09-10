@@ -19,7 +19,9 @@ class MainApp extends StatelessWidget {
       darkTheme: ThemeApp.darkTheme(),
       theme: ThemeApp.ligthTheme(),
       themeMode: ThemeMode.light,
-      transitionDuration: const Duration(milliseconds: 600),
+      transitionDuration: const Duration(
+        milliseconds: 600,
+      ),
       defaultTransition: Transition.fadeIn,
       getPages: GetRoutePage.getPage,
       initialRoute: RouteNamePage.onBoardPath,
