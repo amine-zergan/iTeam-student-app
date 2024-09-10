@@ -21,11 +21,10 @@
     ".flutter-plugins-dependencies": true,
     ".flutter-plugins": true,
     "templates": true,
-    ".vscode": true,
-    ".github": true,
     "ios": true,
     "README.md": true,
     "assets": true,
-    "android": true
+    "android": true,
+    ".vscode": true
   }
 }
