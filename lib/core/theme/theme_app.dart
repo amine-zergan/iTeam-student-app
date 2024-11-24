@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
 
 class ThemeApp {
+  const ThemeApp._();
   static ThemeData ligthTheme() {
     return ThemeData.light().copyWith(
       scaffoldBackgroundColor: baseColor,
