@@ -122,7 +122,6 @@ class CalenderComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.amber,
       margin: const EdgeInsets.only(bottom: 5),
       height: 110,
       child: Row(

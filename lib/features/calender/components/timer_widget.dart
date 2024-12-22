@@ -7,6 +7,7 @@ class TimeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
+      margin: const EdgeInsets.only(top: 7, bottom: 7, left: 5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
