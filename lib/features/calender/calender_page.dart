@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
+import 'package:items_app/features/calender/components/timer_widget.dart';
 
 class CalenderPageView extends StatelessWidget {
   const CalenderPageView({super.key});
@@ -20,71 +21,69 @@ class CalenderPageView extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 3,
-                    child: Container(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                  ),
-                                  child: Text(
-                                    "December ",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineLarge
-                                        ?.copyWith(
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 5,
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.only(
+                                  left: 20,
                                 ),
-                                Container(
-                                  padding: const EdgeInsets.only(
-                                    left: 5,
-                                  ),
-                                  child: Text(
-                                    "2024 ",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineMedium,
-                                  ),
+                                child: Text(
+                                  "December ",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineLarge
+                                      ?.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
-                              ],
-                            ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.only(
+                                  left: 5,
+                                ),
+                                child: Text(
+                                  "2024 ",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium,
+                                ),
+                              ),
+                            ],
                           ),
-                          Expanded(
-                            flex: 3,
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.calendar_month_outlined,
-                                  ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.calendar_month_outlined,
                                 ),
-                                IconButton(
-                                  onPressed: () {},
-                                  iconSize: 20,
-                                  icon: const Icon(
-                                    Icons.arrow_back_ios_new,
-                                    size: 25,
-                                  ),
+                              ),
+                              IconButton(
+                                onPressed: () {},
+                                iconSize: 20,
+                                icon: const Icon(
+                                  Icons.arrow_back_ios_new,
+                                  size: 25,
                                 ),
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.arrow_forward_ios_outlined,
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                              ),
+                              IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.arrow_forward_ios_outlined,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Expanded(
@@ -108,32 +107,6 @@ class CalenderPageView extends StatelessWidget {
               },
             ),
           )
-        ],
-      ),
-    );
-  }
-}
-
-class TimeWidget extends StatelessWidget {
-  const TimeWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "19:00",
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          const Text(
-            "2H30min",
-          ),
         ],
       ),
     );
@@ -206,7 +179,7 @@ class CalenderComponent extends StatelessWidget {
                   Text(
                     "Iteam Plateform",
                     style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          color: Color.fromRGBO(255, 234, 234, 1),
+                          color: const Color.fromRGBO(255, 234, 234, 1),
                         ),
                   ),
                 ],
@@ -242,18 +215,14 @@ class AppBarCalenderComponentWidget extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          onPressed: () {
-            print("======== camera luncher =======");
-          },
+          onPressed: () {},
           icon: const Icon(
             Icons.video_call_outlined,
             color: Colors.white,
           ),
         ),
         IconButton(
-          onPressed: () {
-            print("======== camera luncher =======");
-          },
+          onPressed: () {},
           icon: const Icon(
             Icons.search_rounded,
             color: Colors.white,
