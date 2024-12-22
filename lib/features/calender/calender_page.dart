@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:items_app/core/constant/palette_color.dart';
-import 'package:items_app/features/chat/presentation/components/app_bar_widget.dart';
 
 class CalenderPageView extends StatelessWidget {
   const CalenderPageView({super.key});
@@ -14,13 +13,93 @@ class CalenderPageView extends StatelessWidget {
           const AppBarCalenderComponentWidget(),
           SliverToBoxAdapter(
             child: Container(
-              color: Colors.amber,
-              height: 170,
+              height: 150,
+              margin: EdgeInsets.zero,
               width: double.infinity,
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 5,
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                    left: 20,
+                                  ),
+                                  child: Text(
+                                    "December ",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineLarge
+                                        ?.copyWith(
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    "2024 ",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.calendar_month_outlined,
+                                  ),
+                                ),
+                                IconButton(
+                                  onPressed: () {},
+                                  iconSize: 20,
+                                  icon: const Icon(
+                                    Icons.arrow_back_ios_new,
+                                    size: 25,
+                                  ),
+                                ),
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.arrow_forward_ios_outlined,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: Colors.amber,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           SliverToBoxAdapter(
             child: ListView.builder(
+              padding: const EdgeInsets.only(top: 10),
               itemCount: 30,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -29,6 +108,32 @@ class CalenderPageView extends StatelessWidget {
               },
             ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class TimeWidget extends StatelessWidget {
+  const TimeWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "19:00",
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Text(
+            "2H30min",
+          ),
         ],
       ),
     );
@@ -44,15 +149,14 @@ class CalenderComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.only(bottom: 10),
-      height: 120,
+      color: Colors.amber,
+      margin: const EdgeInsets.only(bottom: 5),
+      height: 110,
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             flex: 3,
-            child: Container(
-              color: Colors.black12,
-            ),
+            child: TimeWidget(),
           ),
           Expanded(
             child: Container(
@@ -72,9 +176,41 @@ class CalenderComponent extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 9,
+            flex: 8,
             child: Container(
-              color: Colors.cyan,
+              decoration: BoxDecoration(
+                color: iconColorActive,
+                borderRadius: BorderRadius.circular(
+                  10,
+                ),
+              ),
+              margin: const EdgeInsets.only(
+                right: 10,
+                top: 10,
+                bottom: 10,
+              ),
+              padding: const EdgeInsets.all(
+                10,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "Programmation Oriente object",
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(color: Colors.white),
+                  ),
+                  Text(
+                    "Iteam Plateform",
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                          color: Color.fromRGBO(255, 234, 234, 1),
+                        ),
+                  ),
+                ],
+              ),
             ),
           )
         ],
