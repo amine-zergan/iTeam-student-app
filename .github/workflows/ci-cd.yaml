@@ -49,7 +49,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
-          java-version: "12.x" 
+          java-version: "17.x" 
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.22.3"
@@ -73,7 +73,7 @@ jobs:
       - uses: actions/setuo-java@v3
         with: 
           distribution: 'zulu'
-          java-version: "12.x"
+          java-version: "17.x"
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.22.3"
