@@ -1,0 +1,2 @@
+/Users/aminemejri/Desktop/iTeam-student-app/android/app/.cxx/Debug/21p3l4ce/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/aminemejri/Desktop/iTeam-student-app/android/app/.cxx/Debug/21p3l4ce/arm64-v8a/CMakeFiles/rebuild_cache.dir

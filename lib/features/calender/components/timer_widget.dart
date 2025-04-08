@@ -13,13 +13,14 @@ class TimeWidget extends StatelessWidget {
         children: [
           Text(
             "19:00",
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(
             height: 5,
           ),
-          const Text(
+          Text(
             "2H30min",
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ],
       ),

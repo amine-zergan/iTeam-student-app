@@ -23,8 +23,7 @@
     "templates": true,
     "ios": true,
     "README.md": true,
-    "assets": true,
-    "android": true,
-    ".vscode": true
-  }
+    "assets": true
+  },
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:items_app/core/constant/palette_color.dart';
 import 'package:items_app/features/auth/presentation/login_page/components/body_sign_in.dart';
 
 class SignInPage extends StatelessWidget {
@@ -24,9 +23,7 @@ class AccessAccountWidget extends StatelessWidget {
       "Se connecter pour accéder à votre compte.",
       style: Theme.of(context).textTheme.titleMedium?.copyWith(
             letterSpacing: 0.8,
-            color: primaryDarkColor.withOpacity(
-              0.6,
-            ),
+            color: const Color.fromARGB(149, 18, 23, 113),
             fontWeight: FontWeight.w600,
           ),
     );

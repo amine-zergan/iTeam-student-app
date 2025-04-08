@@ -34,7 +34,7 @@ class PageViewOnboardWidget extends StatelessWidget {
                   flex: 7,
                   child: Card(
                     elevation: 10,
-                    shadowColor: primaryDarkColor.withOpacity(1),
+                    shadowColor: primaryDarkColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                         10,
@@ -68,11 +68,10 @@ class PageViewOnboardWidget extends StatelessWidget {
                 Text(
                   item.description,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                        color: primaryDarkColor.withOpacity(
-                          0.5,
-                        ),
-                      ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall
+                      ?.copyWith(color: const Color.fromARGB(171, 18, 23, 113)),
                 ),
                 const Spacer(),
               ],

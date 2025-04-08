@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
       ),
       defaultTransition: Transition.fadeIn,
       getPages: GetRoutePage.getPage,
-      initialRoute: RouteNamePage.homePath,
+      initialRoute: RouteNamePage.onBoardPath,
     );
   }
 }

@@ -35,7 +35,7 @@ class CalenderPageView extends StatelessWidget {
                                   "December ",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headlineLarge
+                                      .headlineSmall
                                       ?.copyWith(
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -47,9 +47,8 @@ class CalenderPageView extends StatelessWidget {
                                 ),
                                 child: Text(
                                   "2024 ",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium,
+                                  style:
+                                      Theme.of(context).textTheme.headlineSmall,
                                 ),
                               ),
                             ],
@@ -68,14 +67,14 @@ class CalenderPageView extends StatelessWidget {
                               ),
                               IconButton(
                                 onPressed: () {},
-                                iconSize: 20,
+                                iconSize: 18,
                                 icon: const Icon(
                                   Icons.arrow_back_ios_new,
-                                  size: 25,
                                 ),
                               ),
                               IconButton(
                                 onPressed: () {},
+                                iconSize: 18,
                                 icon: const Icon(
                                   Icons.arrow_forward_ios_outlined,
                                 ),
@@ -123,7 +122,7 @@ class CalenderComponent extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 5),
-      height: 110,
+      height: 100,
       child: Row(
         children: [
           const Expanded(
@@ -172,7 +171,7 @@ class CalenderComponent extends StatelessWidget {
                     "Programmation Oriente object",
                     style: Theme.of(context)
                         .textTheme
-                        .titleMedium
+                        .titleSmall
                         ?.copyWith(color: Colors.white),
                   ),
                   Text(
